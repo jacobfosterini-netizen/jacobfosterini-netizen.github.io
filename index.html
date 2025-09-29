@@ -5,66 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoContentEngine - AI-Powered Content, Fully Automated</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
         }
         .container {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
             text-align: center;
+            padding: 60px 20px;
+            color: white;
         }
         h1 {
-            color: #333;
-            margin-bottom: 10px;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         .subtitle {
-            color: #666;
-            font-size: 1.2em;
+            font-size: 1.4em;
             margin-bottom: 30px;
+            opacity: 0.9;
         }
         .cta-button {
-            background-color: #007bff;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.1em;
             display: inline-block;
-            margin: 20px 0;
+            background: #ff6b6b;
+            color: white;
+            padding: 20px 40px;
+            font-size: 1.3em;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
         }
         .features {
-            text-align: left;
-            margin: 30px 0;
+            background: white;
+            padding: 80px 20px;
+            border-radius: 20px;
+            margin-top: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .feature {
+            text-align: center;
+            padding: 30px;
+        }
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .pricing {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+        .price {
+            font-size: 4em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .disclaimer {
+            font-size: 0.9em;
+            opacity: 0.8;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>AutoContentEngine</h1>
-        <p class="subtitle">AI-Powered Content, Fully Automated</p>
-        
-        <p>Set your topics once. Get weekly SEO-friendly blog posts and social media content. Forever.</p>
-        
-        <div class="features">
-            <h3>🚀 How It Works:</h3>
-            <p>1. Tell us your topics</p>
-            <p>2. Our AI creates content weekly</p>
-            <p>3. Content gets delivered automatically</p>
-            <p>4. You focus on your business</p>
-        </div>
+        <header>
+            <h1>AutoContentEngine</h1>
+            <p class="subtitle">AI-Powered Content, Fully Automated</p>
+            <p style="margin-bottom: 30px; font-size: 1.2em;">Set your topics once. Get weekly SEO-friendly content. Forever.</p>
+            <a href="#get-started" class="cta-button">Start Your 7-Day Free Trial →</a>
+        </header>
 
-        <p><strong>Launch Offer: $29/month</strong></p>
-        
-        <!-- METTEREMO il link di Stripe qui dopo -->
-        <a href="#" class="cta-button">Start Your 7-Day Free Trial</a>
-        
-        <p><small>No credit card required • Cancel anytime</small></p>
+        <section class="features">
+            <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 20px;">How It Works</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h3>1. Set Your Topics</h3>
+                    <p>Tell us your business niche and content preferences in 2 minutes.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🤖</div>
+                    <h3>2. AI Creates Content</h3>
+                    <p>Our system automatically generates blog posts and social media content weekly.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📦</div>
+                    <h3>3. Receive & Publish</h3>
+                    <p>Get your content delivered automatically. You just copy-paste and publish.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💼</div>
+                    <h3>4. Focus on Business</h3>
+                    <p>Save 10+ hours per week. No more content stress.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="get-started" class="pricing">
+            <h2 style="font-size: 2.5em; margin-bottom: 10px;">Start Today</h2>
+            <p style="font-size: 1.2em; margin-bottom: 20px;">Only $29/month - Cancel anytime</p>
+            <div class="price">$29<span style="font-size: 0.5em; color: rgba(255,255,255,0.8);">/month</span></div>
+            <a href="#" class="cta-button">Get Started Now</a>
+            <p class="disclaimer">7-day free trial • No credit card required • Setup in 5 minutes</p>
+        </section>
     </div>
 </body>
 </html>
